@@ -1,0 +1,13 @@
+.chatRoom {
+  margin: 20px;
+}
+
+.chatMessage {
+  background-color: grey;
+  height: 300px;
+  width: 200px;
+}
+
+.chat {
+  color: white;
+}
