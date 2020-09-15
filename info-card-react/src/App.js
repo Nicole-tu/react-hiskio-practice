@@ -1,26 +1,16 @@
 import React, { Component } from 'react';
 import Card from './Card';
-
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import lesson from './lesson-react.json';
+import lesson2 from './lesson-vue.json';
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Card data={lesson} />
+        <Card data={lesson2} />
+      </div>
+    );
+  }
 }
 
 export default App;

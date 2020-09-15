@@ -1,2 +1,66 @@
 .card {
+  display: inline-block;
+  vertical-align: top;
+  width: 500px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #eee;
+  font-family: sans-serif, Microsoft JhengHei;
+  padding: 0 1em 0.5em;
+  box-shadow: 2px 2px 4px #999;
+  margin: 1em;
+}
+
+.card__desc__text {
+  width: 100%;
+}
+
+.card__desc__text.less {
+  height: 1.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__title {
+  border-bottom: 1px solid #ccc;
+}
+
+.card__avatar {
+  width: 30px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.card__teacher {
+  text-decoration: none;
+  color: #06f;
+}
+
+.card__stats {
+  margin: 1em 0;
+  display: flex;
+  align-items: center;
+}
+
+.card__stat {
+  flex: 1;
+}
+
+.card__stat > * {
+  display: inline-block;
+}
+
+.card__stat > label {
+  background: #cdd;
+  font-size: 0.8em;
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  margin-right: 0.5em;
+}
+
+.card__video {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
 }

@@ -1,0 +1,16 @@
+{
+  "title": "精通 VueJS 前端開發完全指南",
+  "desc": "姚偉揚 老師 VueJS 超強線上課程 ! 帶您快速精通 VueJS 專業前端開發的新技能。",
+  "like": "100%",
+  "students": 991,
+  "price": 3200,
+  "teacher": {
+    "name": "姚偉揚",
+    "link": "https://hiskio.com/teachers/8829",
+    "image": "https://cdn.hiskio.com/users/8829/avatar/iCXf5MfovpJ5aSb"
+  },
+  "video": {
+    "poster": "https://cdn.hiskio.com/courses/145/cover/ltvzRRgzXqGmZcB",
+    "source": "https://player.vimeo.com/external/243320445.hd.mp4?s=35641e4878babc374ccccc9c6107a59847dd0aa6&profile_id=174"
+  }
+}

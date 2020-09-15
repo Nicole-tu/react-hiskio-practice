@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class CardTeacher extends Component {
-  render() {
-    const { name, link, image } = this.props.data;
-    return (
-      <div>
-
-      </div>
-    );
-  }
-}
+// stateless functional component
+const CardTeacher = ({ data: { name, link, image } }) => (
+  <a href={link} className="card__teacher">
+    <img className="card__avatar" src={image} />
+    <span>{name}</span>
+  </a>
+);
 
 export default CardTeacher;

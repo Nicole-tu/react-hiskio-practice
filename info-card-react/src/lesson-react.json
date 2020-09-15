@@ -1,0 +1,16 @@
+{
+  "title": "React 16 完全精通 - 從原理到大量實戰應用",
+  "desc": "從 0 開始跟進最新 React 功能，並快速獲得井字遊戲、列表過濾、工作清單、SPA應用、購物車商品頁、聊天室、選單應用、會員登入、無限捲動、薪水計算器、使用政府開放資料...等實作能力",
+  "like": "100%",
+  "students": 310,
+  "price": 3200,
+  "teacher": {
+    "name": "姚偉揚",
+    "link": "https://hiskio.com/teachers/8829",
+    "image": "https://cdn.hiskio.com/users/8829/avatar/iCXf5MfovpJ5aSb"
+  },
+  "video": {
+    "poster": "https://cdn.hiskio.com/courses/215/cover/cHZrjfsc9Fg0U5S",
+    "source": "https://player.vimeo.com/external/285173801.hd.mp4?s=5c3fe942e31cb553b534d8467449ced73bb31896&amp;profile_id=175"
+  }
+}
