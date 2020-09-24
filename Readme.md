@@ -1,3 +1,5 @@
+[![hackmd-github-sync-badge](https://hackmd.io/KLsI-K1CTmO4MwxslG7lqA/badge)](https://hackmd.io/KLsI-K1CTmO4MwxslG7lqA)
+
 # Hiskio React Lesson Note
 
 
