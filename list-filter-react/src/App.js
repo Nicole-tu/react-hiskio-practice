@@ -23,7 +23,7 @@ class App extends Component {
             <input className="search-input" value={filter} onChange={this.onChangeFilter} />
           </fieldset>
           <ul className="rectangle-list">
-            {visibleLessons.map(lesson => (<li key={lesson.id}><a href>{lesson.title}</a></li>))}
+            {visibleLessons.map(lesson => (<li key={lesson.id}><a>{lesson.title}</a></li>))}
           </ul>
         </div>
       </div>

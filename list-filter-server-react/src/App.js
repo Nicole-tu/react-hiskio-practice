@@ -27,11 +27,11 @@ class App extends Component {
     return (
       <div className="container">
         <div className="content">
-          <fieldset class="field-container">
+          <fieldset className="field-container">
             <input className="search-input" value={filter} onChange={this.onChangeFilter} />
           </fieldset>
           <ul className="rectangle-list">
-            {lessons.map(lesson => (<li key={lesson.id}><a href>{lesson.title}</a></li>))}
+            {lessons.map(lesson => (<li key={lesson.id}><a>{lesson.title}</a></li>))}
           </ul>
         </div>
       </div>
