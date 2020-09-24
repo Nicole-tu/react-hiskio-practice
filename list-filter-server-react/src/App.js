@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 
 class App extends Component {
   state = {
@@ -24,11 +25,15 @@ class App extends Component {
   render() {
     const { filter, lessons } = this.state;
     return (
-      <div>
-        <input value={filter} onChange={this.onChangeFilter} />
-        <ul>
-          {visibleLessons.map(lesson => (<li key={lesson.id}>{lesson.title}</li>))}
-        </ul>
+      <div className="container">
+        <div className="content">
+          <fieldset class="field-container">
+            <input className="search-input" value={filter} onChange={this.onChangeFilter} />
+          </fieldset>
+          <ul className="rectangle-list">
+            {lessons.map(lesson => (<li key={lesson.id}><a href>{lesson.title}</a></li>))}
+          </ul>
+        </div>
       </div>
     );
   }

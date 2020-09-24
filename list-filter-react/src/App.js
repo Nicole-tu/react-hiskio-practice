@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import lesson from './lessons.json'
+import lessons from './lessons.json';
+import './App.css';
 
 class App extends Component {
   state = {
@@ -16,12 +17,15 @@ class App extends Component {
     const visibleLessons = lessons.filter(lesson =>
       lesson.title.toLowerCase().includes(filter.toLowerCase()));
     return (
-      <div>
-
-        <input value={filter} onChange={this.onChangeFilter} />
-        <ul>
-          {visibleLessons.map(lesson => (<li key={lesson.id}>{lesson.title}</li>))}
-        </ul>
+      <div className="container">
+        <div className="content">
+          <fieldset class="field-container">
+            <input className="search-input" value={filter} onChange={this.onChangeFilter} />
+          </fieldset>
+          <ul className="rectangle-list">
+            {visibleLessons.map(lesson => (<li key={lesson.id}><a href>{lesson.title}</a></li>))}
+          </ul>
+        </div>
       </div>
     );
   }
