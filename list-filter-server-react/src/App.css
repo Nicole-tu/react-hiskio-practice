@@ -4,7 +4,7 @@
 }
 
 .container {
-  background: -webkit-linear-gradient(left top, #bac8e0, #a7a6cb);
+  background: -webkit-linear-gradient(bottom right, #bac8e0, #a7a6cb);
   background: -o-linear-gradient(bottom right, #bac8e0, #a7a6cb);
   background: -moz-linear-gradient(bottom right, #bac8e0, #a7a6cb);
   background: linear-gradient(to bottom right, #bac8e0, #a7a6cb);
