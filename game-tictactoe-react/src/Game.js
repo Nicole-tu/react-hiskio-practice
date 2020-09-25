@@ -8,6 +8,7 @@ const toSymbol = n => {
     case 0: return '';
     case 1: return 'O';
     case -1: return 'X';
+    default: return null;
   }
 };
 
@@ -28,7 +29,8 @@ class Game extends Component {
     player: 0,
     winner: 0,
     started: false,
-    endGame: false
+    endGame: false,
+    showModal: false
   }
   componentDidUpdate(prevProps, prevState) {
     if (prevState.grids !== this.state.grids) {
@@ -49,10 +51,18 @@ class Game extends Component {
     if (grids[index] !== 0) return;
 
     grids[index] = this.state.player;
+
     this.setState({
       grids,
       player: -this.state.player
-    })
+    });
+
+    if (grids.every(grid => grid !== 0)) {
+      this.setState({
+        endGame: true,
+        showModal: true
+      });
+    }
   };
   startGame = () => {
     this.setState({
@@ -65,7 +75,8 @@ class Game extends Component {
       player: 0,
       winner: 0,
       started: false,
-      endGame: false
+      endGame: false,
+      showModal: false
     })
   };
   getWinner = () => {
@@ -77,15 +88,23 @@ class Game extends Component {
       // }
       if (grids[i] !== 0 && grids[i] === grids[j] && grids[j] === grids[k]) {
         this.setState({
-          endGame: true
+          endGame: true,
+          showModal: true
         });
         return grids[i];
       }
     }
     return 0;
-  }
+  };
+
+  hideModal = () => {
+    this.setState({
+      showModal: false
+    });
+  };
+
   render() {
-    const { grids, player, winner, started, endGame } = this.state;
+    const { grids, player, winner, started, endGame, showModal } = this.state;
     return (
       <div className={style.App}>
         <div className={style.container}>
@@ -114,8 +133,7 @@ class Game extends Component {
               <Button type="default" onClick={this.reset}>Restart Game</Button>
             ]
             : <Button type="primary" onClick={this.startGame}>Start Game</Button>}
-          {endGame ?
-            <ModalCongrate winner={toSymbol(winner)} /> : null}
+          <ModalCongrate visible={endGame && showModal ? true : false} playAgain={this.reset} hideModal={this.hideModal} winner={toSymbol(winner)} />
         </div>
       </div >
     );
