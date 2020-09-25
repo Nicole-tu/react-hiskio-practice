@@ -115,7 +115,7 @@ class Game extends Component {
             ]
             : <Button type="primary" onClick={this.startGame}>Start Game</Button>}
           {endGame ?
-            <ModalCongrate winner={winner} /> : null}
+            <ModalCongrate winner={toSymbol(winner)} /> : null}
         </div>
       </div >
     );
