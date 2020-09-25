@@ -1,0 +1,21 @@
+.header {
+  background: #333;
+  display: flex;
+  color: white;
+  padding: 0 10px;
+  align-items: center;
+}
+
+.header > span {
+  margin: 0 30px;
+}
+
+.header .login-btn {
+  position: fixed;
+  right: 20px;
+  margin: 0;
+}
+
+.header a {
+  color: white;
+}

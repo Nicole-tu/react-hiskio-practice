@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
+import Header from './Header';
+import Modal from './modal/Modal';
 import './App.css';
-import Header from './Header'
-import Modal from './Modal'
+import { Provider } from './context';
 
 class App extends Component {
   state = {
-
-  }
-
+    modal: null,
+    login: false,
+  };
   render() {
+    const contextValue = {
+      state: this.state,
+      setState: this.setState.bind(this),
+    };
     return (
-      <div className="App">
-        <Header />
-      </div>
+      <Provider value={contextValue}>
+        <div className="app">
+          <Header />
+          <Modal />
+        </div>
+      </Provider>
     );
   }
 }
